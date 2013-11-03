@@ -28,7 +28,6 @@ module.exports = function(grunt) {
     },
     zip: {
       dist: {
-        compression: 'DEFLATE',
         src: [
           'manifest.json',
           'window.html',
@@ -40,8 +39,7 @@ module.exports = function(grunt) {
         ],
         dest: 'dist/kanade-chrome.zip',
         router: function (filepath){
-          var filename = path.basename(filepath);
-          return 'kanade-chrome/' + filename;
+          return 'kanade-chrome/' + filepath;
         }
       }
     }
