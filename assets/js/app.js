@@ -3,10 +3,6 @@ $(function(){
   var manifest = chrome.runtime.getManifest();
   $('#version').text(manifest.version);
 
-  $('#info-button').click(function(){
-    $('#about').toggleClass('hidden');
-  });
-
   var seasons;
   var html = '';
   $.getJSON('data/seasons.json', function(data){
