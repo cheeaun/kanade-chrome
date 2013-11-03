@@ -1,0 +1,216 @@
+// Core variables and mixins
+@bootstrapPath: '../../bower_components/bootstrap/less/';
+@import "@{bootstrapPath}variables.less";
+@import "@{bootstrapPath}mixins.less";
+@import "@{bootstrapPath}normalize.less";
+@import "@{bootstrapPath}scaffolding.less";
+@import "@{bootstrapPath}type.less";
+@import "@{bootstrapPath}badges.less";
+@import "@{bootstrapPath}list-group.less";
+
+@brand-primary: #5b7add;
+
+#sidebar{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 320px;
+	overflow: auto;
+	padding: 20px;
+
+	h1{
+		margin-top: 0;
+	}
+}
+
+#about{
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid @gray-lighter;
+}
+
+#seasons-list{
+
+  &.busy{
+    pointer-events: none;
+  }
+
+  a.loading{
+    .animated-stripes;
+  }
+
+  .badge{
+    opacity: .4;
+    text-shadow: 0 1px rgba(0,0,0,.1);
+  }
+  a:hover .badge{
+    opacity: .6;
+  }
+
+}
+
+#content{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 320px;
+	bottom: 0;
+	overflow: auto;
+  padding: 6px 0 20px;
+  background: #fff url(../assets/images/background.png) no-repeat bottom right;
+}
+
+#content-blank{
+  text-align: center;
+  margin-top: 10em;
+  color: @gray-light;
+}
+
+#content-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li{
+    margin-bottom: 3px;
+    display: flex;
+  }
+
+  .image{
+    flex-grow: 1;
+    min-width: 80px;
+    max-width: 80px;
+
+    img{
+      width: 80px;
+      min-height: 80px;
+    }
+  }
+
+  .info{
+    flex-grow: 1;
+    padding: 5px 10px 10px;
+
+    a{
+      display: block;
+      font-size: 1.3em;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+
+  .score{
+    float: right;
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: @gray-lighter;
+    text-shadow: 0 1px rgba(0,0,0,.1);
+
+    &.mad{
+      background-color: @brand-danger;
+    }
+    &.good{
+      background-color: @brand-primary;
+    }
+    &.ok{
+      background-color: lighten(@brand-primary, 15%);
+    }
+  }
+
+  .episodes{
+    display: block;
+  }
+
+  .genres{
+    display: block;
+    opacity: .5;
+  }
+}
+
+#loader{
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  -webkit-appearance: none;
+  appearance: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+  height: 4px;
+
+  &::-webkit-progress-bar{
+    background-color: transparent;
+  }
+
+  &::-webkit-progress-value{
+    background-color: @brand-primary;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+    .animated-stripes;
+  }
+
+  &.loading{
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar{
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(0,0,0,.1);
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: rgba(0,0,0,.4);
+}
+
+.animated-stripes{
+  background-size: 30px 30px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(0,0,0, 0.1)  25%,
+    transparent       25%,
+    transparent       50%,
+    rgba(0,0,0, 0.1)  50%,
+    rgba(0,0,0, 0.1)  75%,
+    transparent       75%,
+    transparent
+  );
+  -webkit-animation: barberpole .5s linear infinite;
+  animation: barberpole .5s linear infinite;
+}
+
+@-webkit-keyframes barberpole {
+  from { background-position: 0 0; }
+  to   { background-position: 60px 30px; }
+}
+
+@keyframes barberpole {
+  from { background-position: 0 0; }
+  to   { background-position: 60px 30px; }
+}
+
+.fadeshow{
+  -webkit-animation: fadeshow .5s;
+  animation: fadeshow .5s;
+}
+
+@-webkit-keyframes fadeshow {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeshow {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

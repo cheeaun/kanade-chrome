@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Kanade</title>
+    <meta charset="utf-8">
+  	<link rel="stylesheet" href="build/app.css">
+  </head>
+  <body>
+    <div id="sidebar">
+      <header>
+        <h1>Kanade</h1>
+        <p>Explore anime series for every season, with scores and genres for easy&nbsp;comparison.</p>
+      </header>
+      <div id="seasons">
+        <div class="list-group" id="seasons-list">
+        </div>
+        <p>Animes start around January for Winter, April for Spring, July for Summer and October for Fall.</p>
+      </div>
+      <div id="about">
+        <p>
+          Version <b id="version"></b><br>
+          &copy; <a href="http://cheeaun.com/" target="_blank">Lim Chee Aun</a> &middot; <a href="http://twitter.com/cheeaun" target="_blank">@cheeaun</a><br>
+          <a href="http://cheeaun.mit-license.org/" target="_blank">MIT licensed</a> &middot; Data from <a href="http://myanimelist.net/" target="_blank">MyAnimeList.net</a><br>
+          <a href="http://github.com/cheeaun/kanade-chrome" target="_blank">GitHub repo</a> &middot; <a href="http://github.com/cheeaun/kanade-chrome/issues" target="_blank">Report issues</a>
+        </p>
+      </div>
+    </div>
+    <div id="content">
+      <p id="content-blank">Start by selecting a season from the list.</p>
+      <ul id="content-list">
+      </ul>
+    </div>
+    <progress id="loader" value="0" max="100"></progress>
+    <script src="build/app.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

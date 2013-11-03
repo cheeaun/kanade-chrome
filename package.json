@@ -1,0 +1,19 @@
+{
+  "name": "kanade-chrome",
+  "version": "0.1.0",
+  "description": "Explore anime series for every season, with scores and genres for easy comparison.",
+  "keywords": [
+    "kanade",
+    "anime",
+    "tv"
+  ],
+  "author": "Lim Chee Aun",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "~0.8.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-zip": "~0.10.0"
+  }
+}
