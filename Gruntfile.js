@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     },
     concat: {
       build: {
-        src: ['bower_components/jquery/jquery.js', 'bower_components/queue-async/queue.js'],
+        src: ['bower_components/jquery/dist/jquery.js', 'bower_components/queue-async/queue.js'],
         dest: 'build/app.js'
       }
     },
