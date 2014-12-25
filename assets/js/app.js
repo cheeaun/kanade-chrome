@@ -103,7 +103,7 @@ $(function(){
       var tasks = animes.map(function(url, i){
         q.defer(function(done){
           $.ajax({
-            url: 'http://myanimelist.net/anime/' + url,
+            url: 'http://myanimelist.net/anime/' + url.replace(/\/$/, '') + '/',
             timeout: 10*1000, // 10 seconds
             success: function(html){
               try {
